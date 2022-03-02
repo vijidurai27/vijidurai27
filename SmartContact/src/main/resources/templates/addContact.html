@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+ <html   lang="en" xmlns:th="http://www.thymeleaf.org" 
+         th:replace="base1::layout(~{::section})">
+       
+<head>
+<meta charset="ISO-8859-1">
+<title>Add Contact</title>
+
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+       <link  rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    
+</head>
+<body>
+
+   <section class= "contact">
+      
+      <div class= " mr-3 ml-2">
+          
+          
+            
+            <div class ="col-md-10 offset-md-2">
+            
+               <form th:action = "@{/processContact}"
+                     th:object="${contact}"
+                     enctype= "multipart/form-data"
+                     method="POST"
+                     
+                     class = "addData mt-2"
+                     >
+                     
+                <!-- First Name -->     
+                     
+                     
+                <div class ="input-group">
+                  <div class="input-group-prepend">
+                   <div class="input-group-text">
+                   
+                   <i class="fa fa-plus"></i>
+                   
+                   </div>
+                  </div >
+                   
+                 <label for= "name_field"></label>
+                 <input type="text" 
+                        id="firstName" 
+                        name="name" 
+                        placeholder="Enter name here" 
+                        class="form-control"
+                        th:value="${contact.name}"/>
+                 </div>
+                 
+                 
+                 
+                 
+             <!-- Second Name -->       
+                   
+                   <div class ="input-group">
+                   <div class="input-group-prepend">
+                   <div class="input-group-text">
+                   
+                   <i class="fas fa-user-alt"></i>
+                   
+                   </div>
+                </div >
+                  
+                 <label for= "name_field"></label>
+                 <input type="text" 
+                        id="secondName" 
+                        name="secondName" 
+                        placeholder="Enter Nick Name here" 
+                        class="form-control"
+                        th:value="${contact.secondName}"/>
+                 </div> 
+                 
+                 
+                 
+                  
+                 
+               <!-- Phone Field -->        
+                   
+                 <div class ="input-group">
+                   <div class="input-group-prepend">
+                   <div class="input-group-text">
+                   
+                   <i class="fa fa-phone"></i>
+                   
+                   </div>
+                  </div >
+                  
+                 <label for= "name_field"></label>
+                 <input type="number" 
+                        id="email" 
+                        name="phone" 
+                        placeholder="Enter phone number here" 
+                        class="form-control"
+                        th:value="${contact.phone}"/>
+                 </div> 
+                 
+                 
+                 
+                 
+                 <!-- Email Field -->        
+                   
+                 <div class ="input-group">
+                   <div class="input-group-prepend">
+                   <div class="input-group-text">
+                             @
+                  </div>
+                </div >
+                  
+                 <label for= "name_field"></label>
+                 <input type="email" 
+                        id="email" 
+                        name="email" 
+                        placeholder="Enter email here" 
+                        class="form-control"
+                        th:value="${contact.email}"/>
+                 </div> 
+                 
+                 
+                 
+                  <!-- Work Field -->        
+                   
+                 <div class ="input-group">
+                   <div class="input-group-prepend">
+                   <div class="input-group-text">
+                   
+                   <i class="fa fa-briefcase"></i>
+                   
+                   </div>
+                </div >
+                  
+                 <label for= "name_field"></label>
+                 <input type="text" 
+                        id="work" 
+                        name="work" 
+                        placeholder="Enter work here" 
+                        class="form-control"
+                        th:value="${contact.work}"/>
+                 </div> 
+                 
+                 
+                  <!-- Contact Description Field -->    
+                      
+                   
+                <div class ="form-group mt-3">
+                
+                  <textarea
+                  th:value="${contact.description}"
+                  placeholder="Enter contact description" 
+                  name="description" 
+                  id="description"  
+                  class="form-control" 
+                  rows="10"></textarea>
+                
+               </div>
+               
+               
+              <!--  <!-- Contact Image Field -->    
+               
+                <div class = "custom-file">
+                 <input th:value="${contact.image}" type="file" name="profileImage"/>
+               </div>
+               
+                
+               <div class="container">
+               
+               <button class="text-center btn-warning btn btn-dark text-white btn-block ">Save Contact</button>
+               
+               </div>
+                
+               
+        </div>       
+               
+                  </form>
+              </div>
+      </section>
+   
+   
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+ <html   lang="en" xmlns:th="http://www.thymeleaf.org" 
+         th:replace="base1::layout(~{::section})">
+       
+<head>
+
+<meta charset="ISO-8859-1">
+       <title>User</title>
+       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+       <link  rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    
+</head>
+<body>
+
+   <section class= "side-content">
+        
+        <div class ="container">
+		
+		<div class = "row">
+			<h1> Contacts </h1>
+		</div>
+		
+		<div class = "row">
+			<div class = "col-lg-3">
+			<a th:href = "@{dashboard1}" class = "btn btn-dark btn-sm mb-2"> Go Back </a>
+		</div>
+		</div>
+		<table class = "table-responsive table table-striped table-bordered" >
+			<thead class = "table-dark">
+				<tr>
+					
+					<th> ID </th>
+					<th> Name</th>
+					<th> Second Name</th>
+					<th> Work </th>
+					<th> Phone </th>
+					<th> Email </th>
+					<th> image </th>
+					<th> Description </th>
+					<th>Action</th>
+
+				</tr>
+			</thead>
+			
+			<tbody class = "text-white">
+				<tr th:each = "contact: ${contact}">	
+						
+					<td th:text = "${contact.cid}"></td>
+					<td th:text = "${contact.name}"></td>
+					<td th:text = "${contact.secondName}"></td>
+					<td th:text = "${contact.work}"></td>
+					<td th:text = "${contact.phone}"></td>
+					<td th:text = "${contact.email}"></td>
+					<td th:text = "${contact.description}"></td>
+					<td th:text = "${contact.image}"></td> 
+					
+					<td>
+					<a  th:href="@{'/updateContact'+${contact.cid}}" class = "btn btn-primary btn-sm mb-2"> update </a>
+					<a  th:href="@{'/deletecontact'+${contact.cid}}" class = "btn btn-primary btn-sm mb-2"> delete </a>	
+					</td>
+					
+					
+					
+					
+				</tr>
+			</tbody>
+			
+			
+		
+		</table>
+		
+		
+		
+	</div>
+        
+        
+   
+   </section>
+   
+   
+</body>
+</html>

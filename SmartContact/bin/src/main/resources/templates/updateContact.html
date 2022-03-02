@@ -1,0 +1,181 @@
+<!doctype html>
+<html   lang="en" xmlns="http://www.thymeleaf.org" 
+         th:replace="base1::layout(~{::section})">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" 
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" 
+    crossorigin="anonymous">
+    <script src="optionblock.js"></script>
+     
+     <link  rel="stylesheet" type="text/css" th:href="@{/css/update.css}"/>  
+  
+  </head>
+  <body>
+  
+  <section>
+   
+  <div  class="updatePage page-holder bg-cover">
+
+    <div class="container py-5">
+        <!-- <div class="row">
+          <div class="col" style="margin-top: 300px;margin-left: 70px;">
+          <h1 style="color: white"> Contact Update </h1>
+        </div>
+ -->
+
+          <div class="col"style="margin-top: 10px">
+        <div class="card">
+          <div class="card-body" >
+          
+          <!-- "@{'/updateContact'+${contact.cid}}" -->
+          
+  <form action = "/updateContact{${contact.cid}}" th:object="${contact}" method="post">
+                  
+            
+              <div class="form-group">
+              <div class="col-md-11">
+                    <label for="validationServer03" class="form-label">Id</label>
+				    <input type="text" name="cid" th:value="${contact.cid}"
+				    class="form-control " 
+				    id="validationServer03" aria-describedby="validationServer03Feedback"
+				     required placeholder="Enter Id">
+				    <div id="validationServer03Feedback" class="invalid-feedback">
+			  </div></div></div>
+				      
+             <div class="form-group">
+              <div class="col-md-11">
+                    <label for="validationServer03" class="form-label">Name</label>
+				    <input type="text" name="name" th:value="${contact.name}"
+				    class="form-control " 
+				    id="validationServer03" aria-describedby="validationServer03Feedback"
+				     required placeholder="Enter Id">
+				    <div id="validationServer03Feedback" class="invalid-feedback">
+			  </div></div></div>
+			    
+			  
+			  <div class="form-group">
+              <div class="col-md-11">
+                    <label for="validationServer03" class="form-label">Nick Name</label>
+				    <input type="text" name="secondName" th:value="${contact.secondName}"
+				    class="form-control " 
+				    id="validationServer03" aria-describedby="validationServer03Feedback"
+				     required placeholder="Enter Id">
+				    <div id="validationServer03Feedback" class="invalid-feedback">
+			  </div></div></div>
+			  
+			  
+			  <div class="form-group">
+              <div class="col-md-11">
+                    <label for="validationServer03" class="form-label">work</label>
+				    <input type="text" name="work" th:value="${contact.work}"
+				    class="form-control " 
+				    id="validationServer03" aria-describedby="validationServer03Feedback"
+				     required placeholder="Enter Id">
+				    <div id="validationServer03Feedback" class="invalid-feedback">
+			  </div></div></div>
+              
+              
+              <div class="form-group">
+              <div class="col-md-11">
+                    <label for="validationServer03" class="form-label">Email</label>
+				    <input type="text" name="email" th:value="${contact.email}"
+				    class="form-control " 
+				    id="validationServer03" aria-describedby="validationServer03Feedback"
+				     required placeholder="Enter Id">
+				    <div id="validationServer03Feedback" class="invalid-feedback">
+			  </div></div></div>
+            
+            
+			<div class="form-group">
+              <div class="col-md-11">
+                    <label for="validationServer03" class="form-label">Phone</label>
+				    <input type="text" name="phone" th:value="${contact.phone}"
+				    class="form-control " 
+				    id="validationServer03" aria-describedby="validationServer03Feedback"
+				     required placeholder="Enter Id">
+				    <div id="validationServer03Feedback" class="invalid-feedback">
+			  </div></div></div>
+			
+			 
+			 
+			 
+			  
+			  <div class="form-group">
+              <div class="col-md-11">
+                    <label for="validationServer03" class="form-label">Description</label>
+				    <input type="text" name="description" th:value="${contact.description}"
+				    class="form-control " 
+				    id="validationServer03" aria-describedby="validationServer03Feedback"
+				     required placeholder="Enter Id">
+				    <div id="validationServer03Feedback" class="invalid-feedback">
+			  </div></div></div>
+			  
+			  
+			  <div class="form-group"><div class="col-md-11">
+			    <label for="exampleFormControlFile1">Upload Photo</label>
+			    <input type="file" class="form-control-file" id="exampleFormControlFile1" 
+			    name="image">
+			  </div></div><br>
+			  
+			   			
+		  	
+		  	
+			    </div><br>
+			  </div>
+  
+			
+</section>			
+			
+			
+			  
+			 <!-- <div class="col-md-3">
+			
+			    <label for="report"> Report </label>
+			    <select class="form-control" name="patient_report" id="exampleFormControlSelect1">
+			      <option>  select option   </option>
+			      <option>  Cured                         </option>
+			      <option>  Died                          </option>
+			      <option>  Regular Treatment             </option>
+			      <option>  Irregular Discharge           </option>
+			      <option>  Shifted for further Treatment </option>
+			    </select>
+			  </div> -->
+			 
+			 
+			 
+			 
+			  
+			  <div class=" col-md-12 text-center">
+              <button  type="submit" class="sub btn btn-primary btn-lg btn-block" > Submit </button>
+         	  </div>
+         	</form>  
+         	
+         </div>
+          </div> </div> </div></div> </div>
+         
+         
+       
+        
+        
+         
+        
+    
+ 
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+
+  
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+  
+ 
+  </body>
+</html>

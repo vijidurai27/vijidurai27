@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+ <html    lang="en" xmlns:th="http://www.thymeleaf.org" 
+         th:replace="base1::layout(~{::section})">
+       
+<head>
+
+        <meta charset="ISO-8859-1">
+        <title>View Contacts</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+        <link  rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+    
+</head>
+<body>
+  <section class="tableee">
+    <div class ="container">
+		
+	  <div class = "row">
+	  
+      <table class="changeTable table-sm table-hover table table-dark table-bordered">
+  <thead>
+    <tr class = "bg-success">
+      <th style="width:110px;" scope="col">Id</th>
+      <th style="width:110px;" scope="col">Name</th>
+      <th style="width:110px;" scope="col">Nick Name</th>
+      <th style="width:110px;" scope="col">Phone</th>
+      <th style="width:110px;" scope="col">Email</th>
+      <th style="width:160px;" scope="col">Description</th>
+      <th style="width:100px;" scope="col">Work</th>
+      <th style="width:110px;" scope="col">Image</th>
+      <th style="width:110px;" scope="col">Action</th>
+      
+    </tr>
+  </thead>
+  
+     <tbody>
+             <tr th:each = "contact: ${contact}">
+      
+               <td th:text = "${contact.cid}"></td>
+       		   <td th:text = "${contact.name}"></td>
+		 	   <td th:text = "${contact.secondName}"></td>
+		 	   <td th:text = "${contact.phone}"></td>
+		 	   <td th:text = "${contact.email}"></td>
+		 	   <td th:text = "${contact.description}"></td>
+		       <td th:text = "${contact.work}"></td>
+			   <td th:text = "${contact.image}"></td> 
+			   
+			   <td>
+			   <a th:href="@{'/updateContact'+${session.userEmail}}"  class = "settings btn btn-secondary btn-sm mb-2"> Update</a>
+			   <a th:href="@{'/deletecontact'+${contact.cid}}" class = "settings btn btn-secondary btn-sm mb-2"> Delete</a>
+			      </td>
+			   
+	      </tr>
+    
+     </tbody>
+    
+  </table>
+
+</div>
+</div>
+
+</section>
+</body>
+</html>

@@ -1,0 +1,221 @@
+body
+{
+	width:100%;
+	height:cover;
+	background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)) ,url(../images/house.jpg) ;
+	background-size: cover;
+	color:white;
+}
+
+
+.signposters
+{
+	width:100%;
+	height:cover;
+	background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)) ,url(../images/house.jpg) ;
+	background-size: cover;
+	color:white;
+}
+
+.about-banner
+{
+	width:100%;
+	height:cover;
+	background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)) ,url(../images/house.jpg) ;
+	background-size: cover;
+	color:white;
+}
+
+
+.bannerr{
+	
+	width:100%;
+	height:93vh;
+	background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url(../images/Banner.jpg);
+	background-size: cover;
+	color:white;
+	
+	
+}
+
+
+
+.containers{
+	
+	padding:100px 60px 200px 380px;
+}
+
+.login-banner
+{
+	
+	width:100%;
+	height:93vh;
+	background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)), url(../images/food.jpg);
+	background-size: cover;
+	color:white;
+	
+}
+
+.container
+{
+	background-size: cover;
+	
+	padding:10px;
+}
+
+.cardTypeLogin{
+	
+	margin-left: 40px;
+}
+
+
+
+
+.Registeration{
+	
+	margin-top: 100px;
+}
+
+
+
+
+
+
+.main-content{
+	margin-left:1000px;
+}
+
+.user-wrapper{
+	margin-left:40px;
+	padding:10px;
+	
+}
+
+.content-bar{
+	margin-left: 25%;
+	padding-left: 20px;
+}
+
+
+
+
+
+.dashboard{
+	margin-left: 10px;
+	padding: 100px 100px 100px 400px;
+}
+
+.sidebarr{
+	padding:20px;
+}
+
+
+
+@media only screen and (max-width:600px){
+	
+	.sidebar{
+	display: none;
+	width: 80% !important;
+	height:100vh;
+	position: fixed;
+	padding-top: 20px;
+	}
+	
+	.side-content{
+	margin-left: 0% !important;
+	}
+	
+}
+
+.sidebar{
+	width: 18%;
+    
+	height:100%;
+	position: fixed;
+	padding-top: 2%;
+}
+
+.side-content{
+	
+	margin-left: 30%; 
+}
+
+
+.sidebar a{
+	display: block;
+	width: 100%;
+	padding: 15px 45px;
+	
+	color: gray;
+	}
+
+.sidebar a:hover
+{
+	background: #e2e2e2;
+}
+
+.sidebar.divider
+{
+	height: .5px;
+	width: 100%;
+	background: #e2e2e2;
+	margin-top:10px; 
+}
+
+.sidebar .crossBtn{
+	position: absolute;
+	top:0px;
+	right: 65px;
+	
+	font-size: 36px;
+	cursor: pointer;
+}
+
+.contact{
+	
+	margin-top: 5px;
+	padding:auto;
+	
+}
+
+
+.addData{
+	margin-left: 20px;
+	padding:40px;
+}
+
+
+
+.heading{
+	color:#A4B494;
+	margin-top:auto;
+	margin-left: 220px;
+}
+
+
+.tableBody{
+	
+	text-decoration: white;
+}
+
+
+.tableee{
+	padding-top: 10px;
+	margin-top: 50px;
+	margin-left: 210px;
+	padding: auto;
+}
+
+
+
+.settings{
+	
+	padding: 3%;
+	margin-left: 18%;
+	margin-top: 5%;
+}
+
+
+
+
+

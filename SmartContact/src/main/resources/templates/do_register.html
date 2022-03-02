@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org" 
+      th:replace="base::layout(~{::section})">
+<head>
+<meta charset="ISO-8859-1">
+<title>SignUp</title>
+ <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <link  rel="stylesheet" type="text/css" th:href="@{/css/style.css}"/>
+</head>
+<body>
+
+   <section>
+        <div class= "container">
+           <div class="row">
+              <div class="Registeration col-md-8 offset-md-2">
+                   <div th:object="${user}">
+                         
+                      <!--<h4 class="text-center" th:text="*{userEmail}"></h4>  -->
+                   
+                    </div>
+                <h3 class="text-center alert-success">You have succesfully registered..!!</h3> 
+                
+
+                 
+               </div>
+                
+              <div>
+           
+           
+         </div>
+      </div>
+    </div>  
+   
+   
+   </section>
+   
+   
+   
+
+</body>
+</html>
